@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "400906200532",
+    "firebase_url": "https://library-system-c6dec.firebaseio.com",
+    "project_id": "library-system-c6dec",
+    "storage_bucket": "library-system-c6dec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400906200532:android:7b911cd7784a2dc389a241",
+        "android_client_info": {
+          "package_name": "com.biboasu.librarysystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400906200532-673vpb3dc5e77rohc776m553ub8monk7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTW_Mz32XQTLrhpeBJgmg68wE2VyQAqOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "400906200532-673vpb3dc5e77rohc776m553ub8monk7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
