@@ -57,13 +57,13 @@ class _profile_pgState extends State<profile_pg> {
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
-                  child: Image.asset('Images/rings.jpg'),
+                  child: Image.asset('images/book.jpg'),
                 ), Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('Images/rings.jpg'),
+                  child: Image.asset('images/book.jpg'),
                 ), Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('Images/rings.jpg'),
+                  child: Image.asset('images/book.jpg'),
                 ),
               ],
             ),
@@ -82,13 +82,13 @@ class _profile_pgState extends State<profile_pg> {
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
-                  child: Image.asset('Images/rings.jpg'),
+                  child: Image.asset('images/book.jpg'),
                 ), Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('Images/rings.jpg'),
+                  child: Image.asset('images/book.jpg'),
                 ), Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('Images/rings.jpg'),
+                  child: Image.asset('images/book.jpg'),
                 ),
               ],
             ),
