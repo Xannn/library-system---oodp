@@ -1,32 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../components/OurColors.dart';
+import 'package:librarysystem/backend/fetch.dart';
+import 'OurColors.dart';
 
 
-abstract class Book {
+class TestBook extends StatelessWidget {
 
-  String id;
-  String title;
-  String author;
-  String description;
-  String imageURL;
-  String category;
-  String price;
-
-  Book(String id, String title, String author, String description, String imageURL, String category, String price) {
-
-    this.id = id;
-    this.title = title;
-    this.author = author;
-    this.description = description;
-    this.imageURL = imageURL;
-    this.category = category;
-    this.price = price;
-
-  }
-
-  Image thumbnail();
-
-  Widget widget() {
+  @override
+  Widget build(BuildContext context) {
 
     return Padding(
 
@@ -42,7 +22,7 @@ abstract class Book {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
 
-            thumbnail(),
+            Image.asset('images/book.jpg', height: 90),
             Container(
 
               // color: Colors.green,
@@ -52,7 +32,7 @@ abstract class Book {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
 
-                  Text(title,
+                  Text('A Very Long Book Title So That We Test Realistaclly',
 
                     style: TextStyle(
 
@@ -63,7 +43,7 @@ abstract class Book {
                     ),
                   
                   ),
-                  Text(author,
+                  Text('ANotSo LongName',
                   
                     style: TextStyle(
 
@@ -81,14 +61,14 @@ abstract class Book {
               ),
 
             ),
-            Text(price,
+            Text('00.00\$',
             
               style: TextStyle(
 
                 fontWeight: FontWeight.w400,
-                fontSize: 12,
+                fontSize: 17,
                 color: OurColors.instance().light,
-                fontStyle: FontStyle.italic
+                // fontStyle: FontStyle.italic
 
               ),
             
@@ -99,7 +79,6 @@ abstract class Book {
         ),
 
       ),
-
     );
 
   }

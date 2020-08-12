@@ -10,7 +10,7 @@ class DefaultThumbnail extends Book {
   @override
   Image thumbnail() { // can change this to rng select one of three default thumbnails
     
-    return Image.asset('images/book.jpg');
+    return Image.asset('images/book.jpg', height: 90);
 
   }
 

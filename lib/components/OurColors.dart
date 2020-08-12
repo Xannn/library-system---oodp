@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class OurColors {
 
-  static OurColors _obj;
+  static OurColors _obj; 
 
   Color primary;
   Color secondary;
   Color tertiary;
   Color light;
 
-  OurColors._private() {
+  OurColors._private() {  // constructor
     primary = Colors.green[500];
     secondary = Colors.green[700];
     tertiary = Colors.grey[900];

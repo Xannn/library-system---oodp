@@ -13,6 +13,7 @@ class SpecialThumbnail extends Book {
     return Image(
 
       image: NetworkImage(this.imageURL),
+      width: 70,
 
     );
   
