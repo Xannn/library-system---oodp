@@ -3,7 +3,8 @@ import '../../components/OurColors.dart';
 
 
 abstract class Book {
-
+  
+/*hena
   String id;
   String title;
   String author;
@@ -11,6 +12,31 @@ abstract class Book {
   String imageURL;
   String category;
   String price;
+  ReadingMode rmode;
+ 
+
+  Book(String id, String title, String author, String description, String imageURL, String category, String price,ReadingMode mode) {
+
+    this.id = id;
+    this.title = title;
+    this.author = author;
+    this.description = description;
+    this.imageURL = imageURL;
+    this.category = category;
+    this.price = price;
+    this.rmode = mode;
+
+  }
+
+*/
+  String id;
+  String title;
+  String author;
+  String description;
+  String imageURL;
+  String category;
+  String price;
+ 
 
   Book(String id, String title, String author, String description, String imageURL, String category, String price) {
 
