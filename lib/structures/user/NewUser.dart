@@ -1,3 +1,4 @@
+import 'package:librarysystem/structures/book/Book.dart';
 import 'User.dart';
 
 
@@ -14,8 +15,8 @@ class NewUser extends User {
   }
   
   @override
-  List<String> ownedBooksIDs() {
-    return new List<String>();
+  List<Book> ownedBooks() {
+    return new List<Book>();
   }
 
 }

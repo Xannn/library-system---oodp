@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'Book.dart';
+import 'readingModes/Text.dart' as ModeText;
 
 
 final String _desc = 'Nothing to see here, start adding books to your owned.';
 
 class EmptyBook extends Book {
 
-  EmptyBook() : super('0', 'Empty', 'No one', _desc, '', 'None', '0.00');
+  EmptyBook() : super('0', 'Empty', 'No one', _desc, '', 'None', '0.00', new ModeText.Text());
 
   @override
   Image thumbnail() {

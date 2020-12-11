@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:librarysystem/components/OurAppBar.dart';
 import 'package:librarysystem/components/OurColors.dart';
 import 'package:librarysystem/components/OurTextField.dart';
+import 'package:librarysystem/pages/home/home.dart';
 
 
 class SignIn extends StatelessWidget {
@@ -9,7 +10,12 @@ class SignIn extends StatelessWidget {
   final email = TextEditingController();
   final password = TextEditingController();
 
-  void login() {
+  void login(context) {
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => home()),
+    );
     
   }
 
@@ -48,7 +54,7 @@ class SignIn extends StatelessWidget {
             SizedBox(height: 100),
             FlatButton(
 
-              onPressed: () => login(),
+              onPressed: () => login(context),
               color: OurColors.instance().tertiary,
               textColor: OurColors.instance().light,
               child: Text('Login',

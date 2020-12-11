@@ -1,3 +1,4 @@
+import 'package:librarysystem/structures/book/Book.dart';
 
 
 abstract class User {
@@ -8,6 +9,6 @@ abstract class User {
   String password;
   String phone;
 
-  List<String> ownedBooksIDs();
+  List<Book> ownedBooks();
 
 }

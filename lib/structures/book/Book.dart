@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:librarysystem/backend/Manager.dart';
+import 'package:librarysystem/structures/book/readingModes/ReadingMode.dart';
 import '../../components/OurColors.dart';
 
 
 abstract class Book {
   
-/*hena
   String id;
   String title;
   String author;
@@ -12,10 +13,10 @@ abstract class Book {
   String imageURL;
   String category;
   String price;
-  ReadingMode rmode;
+  ReadingMode mode;
  
 
-  Book(String id, String title, String author, String description, String imageURL, String category, String price,ReadingMode mode) {
+  Book(String id, String title, String author, String description, String imageURL, String category, String price, ReadingMode mode) {
 
     this.id = id;
     this.title = title;
@@ -24,35 +25,13 @@ abstract class Book {
     this.imageURL = imageURL;
     this.category = category;
     this.price = price;
-    this.rmode = mode;
-
-  }
-
-*/
-  String id;
-  String title;
-  String author;
-  String description;
-  String imageURL;
-  String category;
-  String price;
- 
-
-  Book(String id, String title, String author, String description, String imageURL, String category, String price) {
-
-    this.id = id;
-    this.title = title;
-    this.author = author;
-    this.description = description;
-    this.imageURL = imageURL;
-    this.category = category;
-    this.price = price;
+    this.mode = mode;
 
   }
 
   Image thumbnail();
 
-  Widget widget() {
+  Widget widget(dynamic context) {
 
     return Padding(
 
@@ -62,7 +41,7 @@ abstract class Book {
         color: OurColors.instance().secondary,
         elevation: 3,
         splashColor: OurColors.instance().primary,
-        onPressed: () => {},
+        onPressed: () => Manager.addBook(this, context),
         child: Row(
           
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

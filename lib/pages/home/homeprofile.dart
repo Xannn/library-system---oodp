@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:librarysystem/backend/Manager.dart';
 import 'package:librarysystem/components/OurAppBar.dart';
 import 'package:librarysystem/components/OurColors.dart';
 
@@ -28,6 +29,7 @@ class _profile_pgState extends State<profile_pg> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
 
       appBar: OurAppBar("My Profile"),
@@ -88,7 +90,7 @@ class _profile_pgState extends State<profile_pg> {
             ],
 
           ),
-          SizedBox(height: 50.0),
+          SizedBox(height: 25.0),
           SizedBox(
 
             // width: 100,
@@ -97,49 +99,14 @@ class _profile_pgState extends State<profile_pg> {
 
               scrollDirection: Axis.horizontal,
               shrinkWrap: true,
-              children: <Widget>[
-
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
-                  child: Image.asset('images/book.jpg'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('images/book.jpg'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('images/book.jpg'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('images/book.jpg'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('images/book.jpg'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('images/book.jpg'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('images/book.jpg'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('images/book.jpg'),
-                ),
-
-              ],
+              children: Manager.allBookThumbnails('b'),
 
             ),
 
           ),
           Center(
           
-            child: Text('Recommended',
+            child: Text('Text & Images',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 23,
@@ -147,58 +114,56 @@ class _profile_pgState extends State<profile_pg> {
                 fontStyle: FontStyle.italic,
               ),
             )
-          
-          
+                
           ),
 
-
-          SizedBox(height: 26.0,),
+          SizedBox(height: 20.0,),
           SizedBox(
             width: 100, height: 100,
             child: ListView(
 
               scrollDirection: Axis.horizontal,
               shrinkWrap: true,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
-                  child: Image.asset('images/book.jpg'),
-                ), Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('images/book.jpg'),
-                ), Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('images/book.jpg'),
-                ),
-              ],
+              children: Manager.allBookThumbnails('i'),
             ),
           ),
-          Center(child: Text('Owned'),),
+          
+          Center(
+          
+            child: Text('Images',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 23,
+                fontWeight: FontWeight.w300,
+                fontStyle: FontStyle.italic,
+              ),
+            )
+                
+          ),
 
-
-
-          SizedBox(height: 26.0,),
+          SizedBox(height: 20.0,),
           SizedBox(
             width: 100, height: 100,
             child: ListView(
 
               scrollDirection: Axis.horizontal,
               shrinkWrap: true,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
-                  child: Image.asset('images/book.jpg'),
-                ), Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('images/book.jpg'),
-                ), Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('images/book.jpg'),
-                ),
-              ],
+              children: Manager.allBookThumbnails('t'),
             ),
           ),
-          Center(child: Text('Rented Rooms'),),
+
+          Center(
+          
+            child: Text('Text',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 23,
+                fontWeight: FontWeight.w300,
+                fontStyle: FontStyle.italic,
+              ),
+            )
+                
+          ),
 
         ],
 

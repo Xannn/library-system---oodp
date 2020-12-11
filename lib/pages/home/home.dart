@@ -16,7 +16,8 @@ class _homeState extends State<home> {
   List<Widget> pages = <Widget>[
     profile_pg(),
     Search_pg(),
-    RentRoom_pg(),
+    // RentRoom_pg(),
+    Container()
   ];
 
   final List<Tab> myTabs = <Tab>[

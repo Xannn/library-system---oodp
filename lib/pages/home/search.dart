@@ -24,7 +24,7 @@ class _Search_pgState extends State<Search_pg> {
   var Searchbarcntrl = TextEditingController();
 
 
-  void searchFor(String s) async {
+  void searchFor(String s, dynamic context) async {
 
     print('reseting list');
     setState(() {
@@ -35,7 +35,7 @@ class _Search_pgState extends State<Search_pg> {
 
     if (s == '') {
       print('empty search');
-      updateWidgets();
+      updateWidgets(context);
       return;
     }
 
@@ -50,12 +50,12 @@ class _Search_pgState extends State<Search_pg> {
         print('factory call complete');      
 
       }
-    updateWidgets();
+    updateWidgets(context);
     return;
 
   }
 
-  void updateWidgets() {
+  void updateWidgets(dynamic context) {
 
     if (bookWidgets == null)
       setState(() { bookWidgets = new List<Widget>(); });
@@ -70,7 +70,7 @@ class _Search_pgState extends State<Search_pg> {
       bookWidgets.clear();
       for (Book book in books) {
 
-        bookWidgets.add(book.widget());
+        bookWidgets.add(book.widget(context));
         
       }
     });
@@ -102,7 +102,7 @@ class _Search_pgState extends State<Search_pg> {
                 maxLines: 1,
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(icon: Icon(Icons.search), hintText: 'search..' ), 
-                onSubmitted: (txt) => searchFor(txt),
+                onSubmitted: (txt) => searchFor(txt, context),
                 
               ),
             

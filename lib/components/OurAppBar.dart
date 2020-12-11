@@ -11,6 +11,7 @@ class OurAppBar extends AppBar {
     centerTitle: true,
     backgroundColor: color != null? color: c.primary,
     bottom: bottom,
+    automaticallyImplyLeading: false,
     title: Text(text,
 
       style: TextStyle(
