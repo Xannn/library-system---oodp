@@ -5,24 +5,24 @@ import 'package:librarysystem/components/OurAppBar.dart';
 import 'package:librarysystem/components/OurColors.dart';
 
 
-class profile_pg extends StatefulWidget {
+class Profile_pg extends StatefulWidget {
 
   @override
-  _profile_pgState createState() => _profile_pgState();
+  _Profile_pgState createState() => _Profile_pgState();
   
 }
 
-class _profile_pgState extends State<profile_pg> {
+class _Profile_pgState extends State<Profile_pg> {
 
-  final Image userImage;
+  final String userImage;
   final String firstName;
   final String lastName;
 
-  _profile_pgState() :
+  _Profile_pgState() :
 
-    userImage = Image.asset('images/darwin.png'),
-    firstName = 'FirstName',
-    lastName = 'LastName',
+    userImage = 'images/profile.png',
+    firstName = '[First Name]',
+    lastName = '[Last Name]',
 
     super();
 
@@ -49,8 +49,8 @@ class _profile_pgState extends State<profile_pg> {
                 child: CircleAvatar(
 
                   radius: 60.0,
-                  backgroundImage: Image.asset('images/darwin.png').image,
-                  backgroundColor: Colors.black,
+                  backgroundImage: Image.asset(userImage).image,
+                  backgroundColor: Colors.white,
 
                 ),
 
@@ -61,7 +61,7 @@ class _profile_pgState extends State<profile_pg> {
 
                   Text(
 
-                    'FirstName',
+                    firstName,
                     style: TextStyle(
 
                       fontSize: 26.0,
@@ -71,8 +71,8 @@ class _profile_pgState extends State<profile_pg> {
                     ),
 
                   ),
-                  Text('LastName',
-
+                  Text(
+                    lastName,
                     style: TextStyle(
 
                       fontSize: 26.0,

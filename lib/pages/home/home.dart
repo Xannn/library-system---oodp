@@ -14,7 +14,7 @@ class home extends StatefulWidget {
 class _homeState extends State<home> {
 
   List<Widget> pages = <Widget>[
-    profile_pg(),
+    Profile_pg(),
     Search_pg(),
     // RentRoom_pg(),
     Container()

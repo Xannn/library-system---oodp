@@ -21,7 +21,7 @@ class _Search_pgState extends State<Search_pg> {
   List<Book> books;
   List<Widget> bookWidgets;
   Column bookWidgetsList;
-  var Searchbarcntrl = TextEditingController();
+  var searchBarCntrl = TextEditingController();
 
 
   void searchFor(String s, dynamic context) async {
